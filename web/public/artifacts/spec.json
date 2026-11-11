@@ -1,0 +1,243 @@
+{
+  "system": {
+    "name": "KAARAN Heated Process Tank",
+    "description": "Uncertainty-aware causal world model for industrial process control",
+    "time_step_unit": "minute",
+    "time_step_value": 1
+  },
+  "state": {
+    "temperature": {
+      "name": "T",
+      "unit": "\u00b0C",
+      "min": 0.0,
+      "max": 120.0,
+      "safe_max": 72.0,
+      "init_min": 30.0,
+      "init_max": 60.0
+    },
+    "level": {
+      "name": "L",
+      "unit": "%",
+      "min": 0.0,
+      "max": 100.0,
+      "init_min": 30.0,
+      "init_max": 80.0
+    }
+  },
+  "action": {
+    "valve": {
+      "name": "v",
+      "unit": "%",
+      "min": 0.0,
+      "max": 100.0
+    },
+    "heater": {
+      "name": "h",
+      "unit": "duty [0,1]",
+      "min": 0.0,
+      "max": 1.0
+    }
+  },
+  "latents_and_noise": {
+    "U": {
+      "name": "Hidden Ambient Confounder",
+      "distribution": "Normal(0, 1)",
+      "observed": false
+    },
+    "eps_T": {
+      "name": "Thermal Process Disturbance",
+      "distribution": "Normal(0, 1)",
+      "observed": false
+    },
+    "eps_L": {
+      "name": "Hydraulic Process Disturbance",
+      "distribution": "Normal(0, 1)",
+      "observed": false
+    }
+  },
+  "dynamics_constants": {
+    "level_valve_coeff": 0.06,
+    "level_decay_coeff": 0.05,
+    "level_noise_scale": 0.3,
+    "heat_base_rate": 6.0,
+    "heat_ref_level": 50.0,
+    "heat_min_level": 15.0,
+    "cool_valve_factor": 0.002,
+    "cool_ambient_temp": 15.0,
+    "loss_ambient_factor": 0.02,
+    "loss_ambient_temp": 25.0,
+    "evap_rate": 0.01,
+    "evap_threshold_temp": 70.0,
+    "temp_confounder_effect": -1.5,
+    "temp_noise_base": 0.15,
+    "temp_noise_valve_coeff": 0.008
+  },
+  "operator_policy": {
+    "h_base": 0.55,
+    "h_U": 0.25,
+    "h_target_T": 55.0,
+    "h_T_coeff": 0.02,
+    "h_noise_scale": 0.05,
+    "v_base": 50.0,
+    "v_U": 8.0,
+    "v_target_L": 60.0,
+    "v_L_coeff": 0.7,
+    "v_noise_scale": 3.0
+  },
+  "probe_policy": {
+    "hold_steps": 8,
+    "valve_min": 0.0,
+    "valve_max": 100.0,
+    "heater_min": 0.0,
+    "heater_max": 1.0,
+    "safety_interlock_T": 72.0
+  },
+  "data_collection": {
+    "train_operator_episodes": 500,
+    "train_probe_episodes": 150,
+    "test_operator_episodes": 100,
+    "featured_test_episodes": 30,
+    "episode_length": 120,
+    "featured_episode_length": 60,
+    "random_seed": 42
+  },
+  "causal_graph": {
+    "nodes": [
+      {
+        "name": "T_t",
+        "label": "Temperature (t)",
+        "type": "state",
+        "observed": true
+      },
+      {
+        "name": "L_t",
+        "label": "Level (t)",
+        "type": "state",
+        "observed": true
+      },
+      {
+        "name": "v_t",
+        "label": "Valve (t)",
+        "type": "action",
+        "observed": true
+      },
+      {
+        "name": "h_t",
+        "label": "Heater (t)",
+        "type": "action",
+        "observed": true
+      },
+      {
+        "name": "U_t",
+        "label": "Confounder U (t)",
+        "type": "latent",
+        "observed": false
+      },
+      {
+        "name": "eps_T_t",
+        "label": "Noise eps_T (t)",
+        "type": "noise",
+        "observed": false
+      },
+      {
+        "name": "eps_L_t",
+        "label": "Noise eps_L (t)",
+        "type": "noise",
+        "observed": false
+      },
+      {
+        "name": "T_t_plus_1",
+        "label": "Temperature (t+1)",
+        "type": "next_state",
+        "observed": true
+      },
+      {
+        "name": "L_t_plus_1",
+        "label": "Level (t+1)",
+        "type": "next_state",
+        "observed": true
+      }
+    ],
+    "edges": [
+      {
+        "from": "U_t",
+        "to": "h_t",
+        "policy": "observational_only",
+        "dashed": true
+      },
+      {
+        "from": "U_t",
+        "to": "v_t",
+        "policy": "observational_only",
+        "dashed": true
+      },
+      {
+        "from": "U_t",
+        "to": "T_t_plus_1",
+        "policy": "all",
+        "dashed": true
+      },
+      {
+        "from": "T_t",
+        "to": "h_t",
+        "policy": "observational_only",
+        "dashed": false
+      },
+      {
+        "from": "L_t",
+        "to": "v_t",
+        "policy": "observational_only",
+        "dashed": false
+      },
+      {
+        "from": "T_t",
+        "to": "T_t_plus_1",
+        "policy": "all",
+        "dashed": false
+      },
+      {
+        "from": "L_t",
+        "to": "T_t_plus_1",
+        "policy": "all",
+        "dashed": false
+      },
+      {
+        "from": "h_t",
+        "to": "T_t_plus_1",
+        "policy": "all",
+        "dashed": false
+      },
+      {
+        "from": "v_t",
+        "to": "T_t_plus_1",
+        "policy": "all",
+        "dashed": false
+      },
+      {
+        "from": "eps_T_t",
+        "to": "T_t_plus_1",
+        "policy": "all",
+        "dashed": true
+      },
+      {
+        "from": "L_t",
+        "to": "L_t_plus_1",
+        "policy": "all",
+        "dashed": false
+      },
+      {
+        "from": "v_t",
+        "to": "L_t_plus_1",
+        "policy": "all",
+        "dashed": false
+      },
+      {
+        "from": "eps_L_t",
+        "to": "L_t_plus_1",
+        "policy": "all",
+        "dashed": true
+      }
+    ]
+  },
+  "mock": false
+}

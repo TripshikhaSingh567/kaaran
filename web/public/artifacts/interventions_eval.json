@@ -1,0 +1,107 @@
+{
+  "mock": false,
+  "cases": [
+    {
+      "name": "do(h = 0)",
+      "action": {
+        "v": 50.0,
+        "h": 0.0
+      },
+      "horizon": 20,
+      "scm_rmse": {
+        "step_5": 0.111,
+        "step_10": 0.352,
+        "step_20": 1.122
+      },
+      "action_model_rmse": {
+        "step_5": 13.395,
+        "step_10": 20.557,
+        "step_20": 25.528
+      },
+      "linear_rmse": {
+        "step_5": 13.862,
+        "step_10": 20.855,
+        "step_20": 25.29
+      },
+      "wasserstein_1": {
+        "scm": 1.122,
+        "action_model": 25.528,
+        "linear": 25.29
+      },
+      "coverage_90": {
+        "scm": 0.932,
+        "action_model": 0.0,
+        "linear": 0.0
+      },
+      "disagreement_summary": "Under do(h = 0) at step 10, true mean temperature is 24.54\u00b0C. KAARAN SCM Ensemble predicts 24.19\u00b0C (error: 0.35\u00b0C), while observational Action Ensemble predicts 45.10\u00b0C (error: 20.56\u00b0C). The logs-only model fails due to hidden confounder U driving spurious correlation."
+    },
+    {
+      "name": "do(v = 30)",
+      "action": {
+        "v": 30.0,
+        "h": 0.5
+      },
+      "horizon": 20,
+      "scm_rmse": {
+        "step_5": 0.069,
+        "step_10": 0.192,
+        "step_20": 0.196
+      },
+      "action_model_rmse": {
+        "step_5": 6.455,
+        "step_10": 8.579,
+        "step_20": 8.948
+      },
+      "linear_rmse": {
+        "step_5": 9.078,
+        "step_10": 11.342,
+        "step_20": 11.048
+      },
+      "wasserstein_1": {
+        "scm": 0.342,
+        "action_model": 8.948,
+        "linear": 11.048
+      },
+      "coverage_90": {
+        "scm": 0.908,
+        "action_model": 0.328,
+        "linear": 0.234
+      },
+      "disagreement_summary": "Under do(v = 30) at step 10, true mean temperature is 52.43\u00b0C. KAARAN SCM Ensemble predicts 52.24\u00b0C (error: 0.19\u00b0C), while observational Action Ensemble predicts 61.01\u00b0C (error: 8.58\u00b0C). The logs-only model fails due to hidden confounder U driving spurious correlation."
+    },
+    {
+      "name": "do(h = 1.0) [Stress Test]",
+      "action": {
+        "v": 50.0,
+        "h": 1.0
+      },
+      "horizon": 20,
+      "scm_rmse": {
+        "step_5": 0.05,
+        "step_10": 0.49,
+        "step_20": 0.262
+      },
+      "action_model_rmse": {
+        "step_5": 5.777,
+        "step_10": 9.584,
+        "step_20": 11.894
+      },
+      "linear_rmse": {
+        "step_5": 5.185,
+        "step_10": 8.666,
+        "step_20": 10.951
+      },
+      "wasserstein_1": {
+        "scm": 0.429,
+        "action_model": 11.894,
+        "linear": 10.951
+      },
+      "coverage_90": {
+        "scm": 0.88,
+        "action_model": 0.144,
+        "linear": 0.178
+      },
+      "disagreement_summary": "Under do(h = 1.0) [Stress Test] at step 10, true mean temperature is 59.27\u00b0C. KAARAN SCM Ensemble predicts 58.78\u00b0C (error: 0.49\u00b0C), while observational Action Ensemble predicts 49.69\u00b0C (error: 9.58\u00b0C). The logs-only model fails due to hidden confounder U driving spurious correlation."
+    }
+  ]
+}
