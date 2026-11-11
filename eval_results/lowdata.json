@@ -1,0 +1,32 @@
+{
+  "mock": false,
+  "runs": [
+    {
+      "fraction": 0.05,
+      "num_episodes": 7,
+      "rmse_T": 1.8259,
+      "rmse_L": 0.3054,
+      "coverage_90": 0.8675,
+      "mean_width_T": 5.7283,
+      "mean_width_L": 0.8778
+    },
+    {
+      "fraction": 0.2,
+      "num_episodes": 30,
+      "rmse_T": 1.6209,
+      "rmse_L": 0.3029,
+      "coverage_90": 0.893,
+      "mean_width_T": 5.169,
+      "mean_width_L": 1.0252
+    },
+    {
+      "fraction": 1.0,
+      "num_episodes": 150,
+      "rmse_T": 1.5905,
+      "rmse_L": 0.3019,
+      "coverage_90": 0.9038,
+      "mean_width_T": 5.2807,
+      "mean_width_L": 1.0088
+    }
+  ]
+}

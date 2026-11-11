@@ -1,0 +1,18 @@
+{
+  "mock": false,
+  "status": "ready",
+  "graph_dot": "digraph {\n        U [latent=true];\n        U -> h;\n        U -> v;\n        U -> T_next;\n        T -> h;\n        L -> v;\n        T -> T_next;\n        L -> T_next;\n        h -> T_next;\n        v -> T_next;\n        L -> L_next;\n        v -> L_next;\n    }",
+  "observational_identification": {
+    "target": "P(T_next | do(h))",
+    "estimand_found": false,
+    "identified": false,
+    "reason": "Unobserved confounder U directly influences both treatment h and outcome T_next with no valid backdoor or frontdoor adjustment set available in observational logs."
+  },
+  "probe_data_identification": {
+    "target": "P(T_next | do(h))",
+    "estimand_found": true,
+    "identified": true,
+    "reason": "In randomised probe experiments, the edge U -> h is severed by experimental intervention design, rendering the effect identifiable."
+  },
+  "summary_text": "=======================================================\nKAARAN DoWhy Formal Causal Identification Analysis\n=======================================================\n\n1. OBSERVATIONAL DATA REGIME (Operator Logs):\n   Target Causal Estimand: P(T_next | do(h))\n   Identifiable: NO\n   Reason: Latent confounder U simultaneously causes treatment h and outcome T_next.\n   No observed set of variables {T, L, v} satisfies the Backdoor Criterion,\n   and no mediator exists to satisfy the Frontdoor Criterion.\n   Conclusion: Observational regression / ML models learn SPURIOUS correlation.\n\n2. PROBE DATA REGIME (Randomized Interventions):\n   Target Causal Estimand: P(T_next | do(h))\n   Identifiable: YES\n   Reason: In probe data collection, heater duty h is randomized independently of U.\n   The causal edge U -> h is severed by experimental intervention design.\n   Conclusion: SCM trained on probe data correctly identifies the true physical mechanism.\n"
+}

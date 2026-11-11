@@ -1,0 +1,616 @@
+{
+  "mock": false,
+  "linear_fit_slope": 1.1421,
+  "linear_fit_intercept": 22.4484,
+  "true_causal_slope": 6.0,
+  "scm_estimated_slope": 5.9879,
+  "samples": [
+    {
+      "heater": 0.786,
+      "delta_T": 0.236
+    },
+    {
+      "heater": 0.723,
+      "delta_T": -0.078
+    },
+    {
+      "heater": 0.497,
+      "delta_T": -1.734
+    },
+    {
+      "heater": 0.739,
+      "delta_T": -0.117
+    },
+    {
+      "heater": 0.767,
+      "delta_T": 1.45
+    },
+    {
+      "heater": 0.583,
+      "delta_T": -0.036
+    },
+    {
+      "heater": 0.556,
+      "delta_T": 1.113
+    },
+    {
+      "heater": 0.898,
+      "delta_T": 0.384
+    },
+    {
+      "heater": 1.0,
+      "delta_T": -1.922
+    },
+    {
+      "heater": 0.534,
+      "delta_T": 0.829
+    },
+    {
+      "heater": 0.885,
+      "delta_T": 0.903
+    },
+    {
+      "heater": 1.0,
+      "delta_T": -0.311
+    },
+    {
+      "heater": 0.812,
+      "delta_T": -0.551
+    },
+    {
+      "heater": 0.897,
+      "delta_T": 0.17
+    },
+    {
+      "heater": 0.787,
+      "delta_T": -0.316
+    },
+    {
+      "heater": 0.712,
+      "delta_T": -0.977
+    },
+    {
+      "heater": 0.676,
+      "delta_T": 1.504
+    },
+    {
+      "heater": 0.96,
+      "delta_T": -0.279
+    },
+    {
+      "heater": 0.326,
+      "delta_T": 1.26
+    },
+    {
+      "heater": 0.377,
+      "delta_T": 0.449
+    },
+    {
+      "heater": 0.955,
+      "delta_T": -0.638
+    },
+    {
+      "heater": 0.807,
+      "delta_T": -1.351
+    },
+    {
+      "heater": 0.442,
+      "delta_T": 1.708
+    },
+    {
+      "heater": 0.52,
+      "delta_T": -1.752
+    },
+    {
+      "heater": 0.727,
+      "delta_T": 0.432
+    },
+    {
+      "heater": 0.59,
+      "delta_T": 2.369
+    },
+    {
+      "heater": 0.925,
+      "delta_T": -0.671
+    },
+    {
+      "heater": 0.9,
+      "delta_T": 1.346
+    },
+    {
+      "heater": 0.967,
+      "delta_T": -1.347
+    },
+    {
+      "heater": 0.566,
+      "delta_T": 1.274
+    },
+    {
+      "heater": 0.818,
+      "delta_T": -1.053
+    },
+    {
+      "heater": 1.0,
+      "delta_T": -0.274
+    },
+    {
+      "heater": 0.739,
+      "delta_T": -0.28
+    },
+    {
+      "heater": 1.0,
+      "delta_T": -2.409
+    },
+    {
+      "heater": 0.524,
+      "delta_T": 1.054
+    },
+    {
+      "heater": 0.912,
+      "delta_T": -0.865
+    },
+    {
+      "heater": 0.699,
+      "delta_T": 0.487
+    },
+    {
+      "heater": 0.607,
+      "delta_T": 1.014
+    },
+    {
+      "heater": 0.669,
+      "delta_T": -1.314
+    },
+    {
+      "heater": 0.92,
+      "delta_T": 1.315
+    },
+    {
+      "heater": 0.664,
+      "delta_T": 0.387
+    },
+    {
+      "heater": 0.489,
+      "delta_T": 0.858
+    },
+    {
+      "heater": 0.778,
+      "delta_T": 0.855
+    },
+    {
+      "heater": 0.831,
+      "delta_T": -0.943
+    },
+    {
+      "heater": 0.857,
+      "delta_T": -0.471
+    },
+    {
+      "heater": 0.358,
+      "delta_T": 2.255
+    },
+    {
+      "heater": 0.889,
+      "delta_T": 1.287
+    },
+    {
+      "heater": 0.857,
+      "delta_T": -0.69
+    },
+    {
+      "heater": 0.761,
+      "delta_T": 1.22
+    },
+    {
+      "heater": 1.0,
+      "delta_T": -0.931
+    },
+    {
+      "heater": 0.848,
+      "delta_T": -0.884
+    },
+    {
+      "heater": 1.0,
+      "delta_T": -0.779
+    },
+    {
+      "heater": 0.862,
+      "delta_T": -1.6
+    },
+    {
+      "heater": 0.985,
+      "delta_T": -0.579
+    },
+    {
+      "heater": 0.474,
+      "delta_T": 1.399
+    },
+    {
+      "heater": 0.338,
+      "delta_T": 0.678
+    },
+    {
+      "heater": 0.816,
+      "delta_T": 0.777
+    },
+    {
+      "heater": 0.885,
+      "delta_T": -0.092
+    },
+    {
+      "heater": 0.926,
+      "delta_T": 0.144
+    },
+    {
+      "heater": 0.633,
+      "delta_T": 0.615
+    },
+    {
+      "heater": 0.856,
+      "delta_T": -1.429
+    },
+    {
+      "heater": 0.709,
+      "delta_T": -1.007
+    },
+    {
+      "heater": 0.445,
+      "delta_T": 1.555
+    },
+    {
+      "heater": 0.219,
+      "delta_T": 1.223
+    },
+    {
+      "heater": 0.697,
+      "delta_T": 1.573
+    },
+    {
+      "heater": 0.824,
+      "delta_T": 0.637
+    },
+    {
+      "heater": 0.929,
+      "delta_T": -0.578
+    },
+    {
+      "heater": 0.783,
+      "delta_T": -1.373
+    },
+    {
+      "heater": 0.885,
+      "delta_T": 0.96
+    },
+    {
+      "heater": 0.553,
+      "delta_T": 0.097
+    },
+    {
+      "heater": 0.584,
+      "delta_T": 0.348
+    },
+    {
+      "heater": 0.775,
+      "delta_T": 1.811
+    },
+    {
+      "heater": 0.878,
+      "delta_T": -0.913
+    },
+    {
+      "heater": 0.951,
+      "delta_T": -0.359
+    },
+    {
+      "heater": 0.731,
+      "delta_T": 0.329
+    },
+    {
+      "heater": 0.944,
+      "delta_T": -1.315
+    },
+    {
+      "heater": 0.223,
+      "delta_T": 2.056
+    },
+    {
+      "heater": 0.637,
+      "delta_T": 0.938
+    },
+    {
+      "heater": 0.719,
+      "delta_T": -0.706
+    },
+    {
+      "heater": 0.628,
+      "delta_T": -0.057
+    },
+    {
+      "heater": 1.0,
+      "delta_T": -2.153
+    },
+    {
+      "heater": 0.534,
+      "delta_T": 0.487
+    },
+    {
+      "heater": 0.635,
+      "delta_T": 0.25
+    },
+    {
+      "heater": 0.509,
+      "delta_T": 0.944
+    },
+    {
+      "heater": 0.812,
+      "delta_T": -0.229
+    },
+    {
+      "heater": 0.831,
+      "delta_T": -0.38
+    },
+    {
+      "heater": 0.295,
+      "delta_T": 0.722
+    },
+    {
+      "heater": 0.525,
+      "delta_T": 1.565
+    },
+    {
+      "heater": 0.956,
+      "delta_T": 0.492
+    },
+    {
+      "heater": 0.869,
+      "delta_T": 0.167
+    },
+    {
+      "heater": 0.531,
+      "delta_T": -0.143
+    },
+    {
+      "heater": 0.699,
+      "delta_T": 0.736
+    },
+    {
+      "heater": 0.731,
+      "delta_T": -0.259
+    },
+    {
+      "heater": 1.0,
+      "delta_T": -0.389
+    },
+    {
+      "heater": 0.284,
+      "delta_T": 1.475
+    },
+    {
+      "heater": 0.891,
+      "delta_T": -0.391
+    },
+    {
+      "heater": 0.349,
+      "delta_T": 2.655
+    },
+    {
+      "heater": 0.723,
+      "delta_T": 0.506
+    },
+    {
+      "heater": 1.0,
+      "delta_T": -2.566
+    },
+    {
+      "heater": 0.536,
+      "delta_T": 0.111
+    },
+    {
+      "heater": 0.661,
+      "delta_T": 0.318
+    },
+    {
+      "heater": 0.667,
+      "delta_T": -0.622
+    },
+    {
+      "heater": 1.0,
+      "delta_T": -4.922
+    },
+    {
+      "heater": 0.763,
+      "delta_T": -0.158
+    },
+    {
+      "heater": 0.688,
+      "delta_T": 0.829
+    },
+    {
+      "heater": 0.325,
+      "delta_T": 2.637
+    },
+    {
+      "heater": 0.429,
+      "delta_T": 0.875
+    },
+    {
+      "heater": 1.0,
+      "delta_T": 0.729
+    },
+    {
+      "heater": 0.926,
+      "delta_T": -0.868
+    },
+    {
+      "heater": 0.661,
+      "delta_T": 1.238
+    },
+    {
+      "heater": 1.0,
+      "delta_T": -3.224
+    },
+    {
+      "heater": 0.517,
+      "delta_T": -0.593
+    },
+    {
+      "heater": 0.57,
+      "delta_T": 1.456
+    },
+    {
+      "heater": 0.94,
+      "delta_T": -1.63
+    },
+    {
+      "heater": 0.523,
+      "delta_T": 0.031
+    },
+    {
+      "heater": 0.627,
+      "delta_T": 1.15
+    },
+    {
+      "heater": 0.644,
+      "delta_T": -0.108
+    },
+    {
+      "heater": 0.917,
+      "delta_T": -0.384
+    },
+    {
+      "heater": 0.69,
+      "delta_T": 0.076
+    },
+    {
+      "heater": 0.33,
+      "delta_T": 2.131
+    },
+    {
+      "heater": 0.846,
+      "delta_T": 2.007
+    },
+    {
+      "heater": 0.879,
+      "delta_T": -0.615
+    },
+    {
+      "heater": 0.747,
+      "delta_T": -0.441
+    },
+    {
+      "heater": 0.401,
+      "delta_T": 0.184
+    },
+    {
+      "heater": 0.571,
+      "delta_T": 1.409
+    },
+    {
+      "heater": 0.907,
+      "delta_T": 0.172
+    },
+    {
+      "heater": 0.764,
+      "delta_T": 0.297
+    },
+    {
+      "heater": 0.568,
+      "delta_T": -0.057
+    },
+    {
+      "heater": 0.257,
+      "delta_T": 2.361
+    },
+    {
+      "heater": 0.714,
+      "delta_T": -0.249
+    },
+    {
+      "heater": 0.636,
+      "delta_T": 2.026
+    },
+    {
+      "heater": 0.524,
+      "delta_T": -0.018
+    },
+    {
+      "heater": 0.836,
+      "delta_T": 0.729
+    },
+    {
+      "heater": 0.412,
+      "delta_T": 1.12
+    },
+    {
+      "heater": 0.983,
+      "delta_T": -0.758
+    },
+    {
+      "heater": 0.385,
+      "delta_T": 1.443
+    },
+    {
+      "heater": 0.498,
+      "delta_T": 1.301
+    },
+    {
+      "heater": 1.0,
+      "delta_T": -1.408
+    },
+    {
+      "heater": 0.856,
+      "delta_T": -1.547
+    },
+    {
+      "heater": 0.857,
+      "delta_T": -0.288
+    },
+    {
+      "heater": 0.735,
+      "delta_T": 2.331
+    },
+    {
+      "heater": 0.87,
+      "delta_T": -1.153
+    },
+    {
+      "heater": 0.761,
+      "delta_T": -0.618
+    },
+    {
+      "heater": 0.63,
+      "delta_T": 0.458
+    },
+    {
+      "heater": 0.809,
+      "delta_T": -1.334
+    },
+    {
+      "heater": 0.765,
+      "delta_T": 0.326
+    },
+    {
+      "heater": 0.748,
+      "delta_T": -0.572
+    },
+    {
+      "heater": 0.997,
+      "delta_T": -0.733
+    },
+    {
+      "heater": 0.76,
+      "delta_T": 2.327
+    },
+    {
+      "heater": 0.487,
+      "delta_T": 1.968
+    }
+  ],
+  "calibration_checks": {
+    "heater_coeff_under_30_percent": true,
+    "heater_coeff_measured": -3.072,
+    "true_effect_measured": 6.0,
+    "step_10_disagreement_deg_C": 45.55,
+    "step_10_target_met": true
+  }
+}
